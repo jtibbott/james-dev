@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>James | Developer Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script>
+      function toggleTheme() {
+        const html = document.documentElement;
+        const current = html.getAttribute("data-theme");
+        const next = current === "light" ? "dark" : "light";
+        html.setAttribute("data-theme", next);
+        localStorage.setItem("theme", next);
+      }
+      document.addEventListener("DOMContentLoaded", () => {
+        const saved = localStorage.getItem("theme");
+        if (saved) document.documentElement.setAttribute("data-theme", saved);
+      });
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1>James</h1>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><button onclick="toggleTheme()">Toggle Theme</button></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="hero">
+        <h2>Backend-Focused Developer</h2>
+        <p>Studying BSc Computer Science and available for freelance work.</p>
+      </section>
+
+      <section id="about">
+        <h2>About Me</h2>
+        <p>
+          Hey, I’m James — a backend-leaning developer with frontend experience,
+          currently working toward a BSc in Computer Science. I enjoy building
+          solid systems and elegant interfaces.
+        </p>
+      </section>
+
+      <section id="projects">
+        <h2>Projects</h2>
+        <ul>
+          <li>
+            <strong>Project Name</strong> – Brief description here.
+            <a href="#">GitHub</a>
+          </li>
+        </ul>
+      </section>
+
+      <section id="services">
+        <h2>Freelance Services</h2>
+        <ul>
+          <li>Backend API development</li>
+          <li>Full-stack web apps</li>
+          <li>Database design and integration</li>
+          <li>Performance optimization</li>
+        </ul>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>
+          Email:
+          <a href="mailto:your.email@example.com">your.email@example.com</a>
+        </p>
+        <p>LinkedIn: <a href="#">YourProfile</a></p>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 James. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
